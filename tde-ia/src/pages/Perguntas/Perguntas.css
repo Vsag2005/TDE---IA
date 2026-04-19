@@ -1,0 +1,245 @@
+.pathos-chat-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr 290px;
+  background:
+    radial-gradient(circle at top center, rgba(170, 116, 58, 0.12), transparent 28%),
+    linear-gradient(135deg, #110c09, #1d120e 48%, #0b0807);
+  color: #ead7b4;
+}
+
+.chat-sidebar,
+.chat-main {
+  border: 1px solid rgba(194, 145, 86, 0.14);
+  background: rgba(22, 15, 12, 0.82);
+}
+
+.chat-sidebar {
+  padding: 24px 18px;
+}
+
+.chat-main {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chat-sidebar-header h2,
+.chat-topbar h1,
+.prompt-card h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.chat-kicker,
+.message-author,
+.chat-brand p {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  color: #b88b56;
+}
+
+.sidebar-action,
+.chat-topbar button,
+.suggestion-row button,
+.chat-composer button {
+  border-radius: 16px;
+  border: 1px solid rgba(202, 153, 93, 0.24);
+  background: linear-gradient(180deg, rgba(82, 53, 30, 0.72), rgba(39, 25, 18, 0.95));
+  color: #f0d8b1;
+  cursor: pointer;
+}
+
+.sidebar-action {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+
+.fontes-lista-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fonte-item-pathos {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(202, 153, 93, 0.12);
+  background: rgba(15, 10, 8, 0.68);
+}
+
+.fonte-item-pathos input {
+  width: auto;
+  margin: 3px 0 0;
+  accent-color: #c7863f;
+}
+
+.fonte-item-pathos span,
+.empty-sidebar-card,
+.insight-box p {
+  display: block;
+  margin-top: 6px;
+  color: #cfbc9c;
+  line-height: 1.6;
+}
+
+.empty-sidebar-card,
+.insight-box {
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px dashed rgba(201, 153, 90, 0.18);
+  background: rgba(15, 10, 8, 0.55);
+}
+
+.chat-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.chat-brand {
+  text-align: center;
+}
+
+.chat-topbar h1 {
+  font-size: 54px;
+  color: #e4ba83;
+  margin: 0;
+}
+
+.prompt-card {
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid rgba(210, 160, 97, 0.14);
+  background: rgba(18, 11, 8, 0.74);
+}
+
+.prompt-card h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+}
+
+.prompt-card p {
+  line-height: 1.7;
+  color: #d1bb96;
+}
+
+.suggestion-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.suggestion-row button,
+.chat-topbar button,
+.chat-composer button {
+  padding: 12px 16px;
+}
+
+.chat-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 4px;
+}
+
+.message-card {
+  border-radius: 22px;
+  padding: 18px;
+  max-width: 88%;
+  border: 1px solid rgba(205, 159, 97, 0.14);
+  background: rgba(17, 11, 8, 0.72);
+}
+
+.message-card.user {
+  align-self: flex-end;
+  background: linear-gradient(180deg, rgba(97, 61, 32, 0.74), rgba(48, 29, 19, 0.95));
+}
+
+.message-card.ia {
+  align-self: flex-start;
+}
+
+.message-card p {
+  line-height: 1.7;
+  margin: 8px 0 0;
+  color: #ebdbc3;
+}
+
+.trechos-box {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trecho-item {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(61, 38, 22, 0.48);
+  border: 1px solid rgba(209, 163, 98, 0.12);
+}
+
+.trecho-item span {
+  display: block;
+  margin-top: 6px;
+  line-height: 1.6;
+  color: #d9c19a;
+}
+
+.chat-composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.chat-composer textarea {
+  min-height: 90px;
+  resize: none;
+  border-radius: 20px;
+  border: 1px solid rgba(201, 153, 90, 0.18);
+  background: rgba(14, 10, 8, 0.85);
+  color: #f3e4ca;
+  padding: 18px;
+  font-size: 15px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media (max-width: 1180px) {
+  .pathos-chat-page {
+    grid-template-columns: 1fr;
+  }
+
+  .message-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .chat-topbar,
+  .chat-composer {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chat-topbar h1,
+  .prompt-card h2 {
+    font-size: 34px;
+  }
+}
